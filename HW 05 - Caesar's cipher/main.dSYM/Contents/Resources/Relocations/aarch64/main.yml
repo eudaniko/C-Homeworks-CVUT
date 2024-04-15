@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/daniel/Library/Mobile Documents/com~apple~CloudDocs/CVUT STUDY/CPRP/b0b36prp-hw05/main'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003974, symSize: 0x110 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003974, symSize: 0x110 }
+  - { offsetInCU: 0xD9, offset: 0xD9, size: 0x8, addend: 0x0, symName: _length_check, symObjAddr: 0x110, symBinAddr: 0x100003A84, symSize: 0x78 }
+  - { offsetInCU: 0x127, offset: 0x127, size: 0x8, addend: 0x0, symName: _shift_string, symObjAddr: 0x188, symBinAddr: 0x100003AFC, symSize: 0x1C4 }
+  - { offsetInCU: 0x1CD, offset: 0x1CD, size: 0x8, addend: 0x0, symName: _count_matching_chars, symObjAddr: 0x34C, symBinAddr: 0x100003CC0, symSize: 0xE8 }
+  - { offsetInCU: 0x23B, offset: 0x23B, size: 0x8, addend: 0x0, symName: _read_line, symObjAddr: 0x434, symBinAddr: 0x100003DA8, symSize: 0x15C }
+...
