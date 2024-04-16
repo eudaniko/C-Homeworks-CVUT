@@ -9,9 +9,13 @@
 
 // Function declarations
 char *read_line();
+
 int length_check(char *str1, char *str2, bool optional_mode);
+
 char *shift_string(char *str, int shift_amount_delta);
-int count_matching_chars(const char* str1, const char* str2);
+
+int count_matching_chars(const char *str1, const char *str2);
+
 int levenshtein_distance(const char *str1, const char *str2);
 
 // Main function
@@ -31,8 +35,8 @@ int main(int argc, char *argv[]) {
     // Iterate through possible shifts
     for (int i = 0; i < 52; ++i) {
         char *shifted_str = shift_string(encoded_str, i);
-        int distance = optional_mode ? 
-                       levenshtein_distance(shifted_str, overheard_str) : 
+        int distance = optional_mode ?
+                       levenshtein_distance(shifted_str, overheard_str) :
                        (strlen(shifted_str) - count_matching_chars(shifted_str, overheard_str));
         // Update the best shift if a smaller distance is found
         if (distance < min_distance) {
@@ -94,7 +98,7 @@ char *read_line() {
             exit(100);
         }
         // Resize string if necessary
-        if (len == capacity - 1){
+        if (len == capacity - 1) {
             capacity *= 2;
             str = realloc(str, capacity);
         }
@@ -105,15 +109,15 @@ char *read_line() {
 }
 
 // Function to check the length of input strings
-int length_check(char *str1, char *str2, bool optional_mode){
+int length_check(char *str1, char *str2, bool optional_mode) {
     // Skip check in optional mode
-    if (optional_mode){
+    if (optional_mode) {
         return 0;
     }
     // Check if lengths are equal
     int length_str1 = strlen(str1);
     int length_str2 = strlen(str2);
-    if(length_str1!= length_str2){
+    if (length_str1 != length_str2) {
         fprintf(stderr, "Error: Chybna delka vstupu!\n");
         exit(101);
     }
@@ -132,8 +136,8 @@ char *shift_string(char *str, int shift_amount_delta) {
 
         // Apply shift
         int k = 0;
-        while (shift_amount_delta > k){
-            if( is_large_sign || is_small_sign ) {
+        while (shift_amount_delta > k) {
+            if (is_large_sign || is_small_sign) {
                 changed_char += 1;
                 // Wrap around the alphabet
                 changed_char = (changed_char == 'Z' + 1) ? 'a' :
@@ -149,7 +153,7 @@ char *shift_string(char *str, int shift_amount_delta) {
 }
 
 // Function to count matching characters in two strings
-int count_matching_chars(const char* str1, const char* str2) {
+int count_matching_chars(const char *str1, const char *str2) {
     int count = 0;
     int length = strlen(str2);
     // Count matching characters
