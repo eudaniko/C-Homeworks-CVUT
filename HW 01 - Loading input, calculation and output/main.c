@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 /* The main program */
 int printResults(int firstNoun, int secondNoun) {
     printf("Desitkova soustava: %d %d\n", firstNoun, secondNoun);
