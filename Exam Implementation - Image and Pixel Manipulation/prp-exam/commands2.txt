@@ -1,0 +1,4 @@
+setcolor 3 0 0 0
+setcolor 6 1 1 19
+setcolor 1 256s 255 255
+printcor 6 0 0 1200 675
